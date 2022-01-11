@@ -8,12 +8,12 @@ pipeline{
 
 	stages {
 	    
-	    stage('gitclone') {
+	    /*stage('gitclone') {
 
 			steps {
 				git 'https://github.com/kranthi5121/image-to-docker-hub/nodeapp_test.git'
 			}
-		}
+		}*/
 
 		stage('Build') {
 
