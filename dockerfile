@@ -1,12 +1,1 @@
-FROM node:latest
-
-WORKDIR /usr/src/app
-
-COPY package*.json ./
-
-RUN npm install
-
-COPY . .
-
-EXPOSE 3000
-CMD [ "node", "index.js" ]
+FROM maven:3.8.4-jdk-11
