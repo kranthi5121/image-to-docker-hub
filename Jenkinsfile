@@ -1,9 +1,9 @@
 pipeline{
 
-	agent {label 'docker-slave'}
+	agent any     //{label 'docker-slave'}
 
 	environment {
-		DOCKERHUB_CREDENTIALS=credentials('dockerhub')
+		DOCKERHUB_CREDENTIALS=credentials('Dockerhub')
 	}
 
 	stages {
@@ -18,7 +18,7 @@ pipeline{
 		stage('Build') {
 
 			steps {
-				sh 'docker build -t kranthi5121/nodeapp_test:latest .'
+				sh 'docker build -t kranthi5121/maven:latest .'
 			}
 		}
 
@@ -32,7 +32,7 @@ pipeline{
 		stage('Push') {
 
 			steps {
-				sh 'docker push kranthi5121/nodeapp_test:latest'
+				sh 'docker push kranthi5121/maven:latest'
 			}
 		}
 	}
